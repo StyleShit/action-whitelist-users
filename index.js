@@ -1,6 +1,6 @@
-const core      = require('@actions/core');
-const github    = require('@actions/github');
-const fs        = require('fs');
+const core      = require( '@actions/core' );
+const github    = require( '@actions/github' );
+const fs        = require( 'fs' );
 
 // Get the current user who initiated the workflow.
 const currentUser = github.context.actor;

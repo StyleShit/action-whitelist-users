@@ -6042,9 +6042,9 @@ module.exports = require("zlib");;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const core      = __nccwpck_require__(186);
-const github    = __nccwpck_require__(438);
-const fs        = __nccwpck_require__(747);
+const core      = __nccwpck_require__( 186 );
+const github    = __nccwpck_require__( 438 );
+const fs        = __nccwpck_require__( 747 );
 
 // Get the current user who initiated the workflow.
 const currentUser = github.context.actor;
