@@ -1,4 +1,8 @@
 name: 'Whitelist Users'
+author: 'StyleShit'
+branding:
+  icon: shield
+  color: blue
 description: 'Create a whitelist of users who can execute a GitHub Action'
 inputs:
   whitelist:
