@@ -1,0 +1,27 @@
+{
+  "name": "action-whitelist-users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StyleShit/action-whitelist-users.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StyleShit/action-whitelist-users/issues"
+  },
+  "homepage": "https://github.com/StyleShit/action-whitelist-users#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.3"
+  }
+}

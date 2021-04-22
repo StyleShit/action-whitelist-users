@@ -1,0 +1,14 @@
+name: 'Whitelist Users'
+description: 'Create a whitelist of users who can execute a GitHub Action'
+inputs:
+  whitelist:
+    description: 'A comma separated list of user names'
+    required: false
+    default: ''
+  whitelist-file:
+    description: 'Path to a file which contains a list of user names, one user per line.'
+    required: false
+    default: ''
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
