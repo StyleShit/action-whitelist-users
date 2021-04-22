@@ -17,9 +17,8 @@ if ( ! isUserAllowed( currentUser ) )
  * 
  * @returns {string[]}
  */
- function generateWhitelist()
- {
-
+function generateWhitelist()
+{
     // Get an array of users from the comma-separated list.
     const listFromString = core.getInput( 'whitelist' ).split( ',' ).map( ( userName ) => { 
         return userName.trim();
@@ -30,18 +29,25 @@ if ( ! isUserAllowed( currentUser ) )
     const path = core.getInput( 'whitelist-file' ).trim();
     let listFromFile = [];
 
-   console.log( path );
+    if ( path )
+    {
+        try
+        {
+            const file = fs.readFileSync( path );
 
-    if ( path && fs.existsSync( path ) ) {
-        listFromFile = fs.readFileSync( path ).split( '\n' ).map( ( userName ) => {
-            return userName.trim();
-        } );
+            listFromFile = file.toString().split( '\n' ).map( ( userName ) => {
+                return userName.trim();
+            } );
+        }
 
-       console.log( JSON.stringify( listFromFile ) );
+        catch ( e )
+        {
+            core.error( 'Cannot read whitelist file.' );
+            core.error( e );
+        }
     }
 
     return [ ...listFromString, ...listFromFile ];
-    
 };
 
 
