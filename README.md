@@ -28,10 +28,13 @@ Path to a file which contains a list of user names, one user per line. Default `
 
 The path is relative to the repository root ( e.g. `.github/workflows/my-list.txt` ).
 
+**NOTE:** You must checkout the repository if you're using this option.
+
 
 ### Example usage
 
 ```YML
+- uses: actions/checkout@master
 - name: Block non-permitted users
   uses: StyleShit/action-whitelist-users@v1
   with:
